@@ -1,6 +1,7 @@
 import { defineConfig, RollupOptions } from 'rollup';
 import typescript from '@rollup/plugin-typescript';
 import { dts } from 'rollup-plugin-dts';
+import terser from '@rollup/plugin-terser';
 export default defineConfig([
   {
     input: 'src/module1/module1.ts',
@@ -14,6 +15,11 @@ export default defineConfig([
       {
         format: 'cjs',
         file: 'dist/module1/module1.cjs.js',
+      },
+      {
+        format: 'es',
+        file: 'dist/module1/module1.esm.min.js',
+        plugins: [terser()],
       },
     ],
   },
@@ -29,6 +35,11 @@ export default defineConfig([
       {
         format: 'cjs',
         file: 'dist/module2/module2.cjs.js',
+      },
+      {
+        format: 'es',
+        file: 'dist/module2/module2.esm.min.js',
+        plugins: [terser()],
       },
     ],
   },
