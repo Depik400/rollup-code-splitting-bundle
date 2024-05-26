@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --declaration --emitDeclarationOnly && rollup --config .\\rollup.config.ts --configPlugin @rollup/plugin-typescript && node build-meta.cjs"
+    "build": "tsc --declaration --emitDeclarationOnly && rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript && node build-meta.cjs"
   },
   "author": "",
   "license": "ISC",
