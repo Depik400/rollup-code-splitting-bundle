@@ -1,6 +1,6 @@
 # Работа с rollup для code-splitting
 
-1. Выполняем `tsc --declaration`, генерируем необходимые файлы с типами
+1. Выполняем `tsc --declaration --emitDeclarationOnly`, генерируем необходимые файлы с типами
 
 2. Выполняем `rollup --config .\rollup.config.ts --configPlugin @rollup/plugin-typescript` для того, чтобы собрать бандл
 
