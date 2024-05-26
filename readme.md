@@ -8,9 +8,12 @@
 
 4. Переходим в папку dist и выполняем npm publish, публикуем пакет в npm registry
 
+> Либо `npm run build`
+
 Так мы собрали пакет, в котором каждый модуль находится в своей папке
 Это позволяет подключать модули не из одного entry, что на практике должно улучшить tree-shaking
 
 ```js
 import module1 from `<package-name>/module1`
+import module2 from `<package-name>/module2`
 ```
