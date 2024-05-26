@@ -4,7 +4,7 @@ import { dts } from 'rollup-plugin-dts';
 export default defineConfig([
   {
     input: 'src/module1/module1.ts',
-    plugins: [typescript()],
+    plugins: [typescript({ declaration: false, declarationDir: undefined })],
     output: [
       {
         format: 'es',
@@ -19,7 +19,7 @@ export default defineConfig([
   },
   {
     input: 'src/module2/module2.ts',
-    plugins: [typescript()],
+    plugins: [typescript({ declaration: false, declarationDir: undefined })],
     output: [
       {
         format: 'es',
